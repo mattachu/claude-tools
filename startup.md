@@ -47,9 +47,9 @@ Guard against these actively throughout every session:
 
 *Fetch the relevant overview file at the start of a session on that topic.*
 
-| Topic                       | Overview File URL                                                                                                                                                                               |
-|-----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Clair Obscur: Expedition 33 | [Formatted](https://gist.github.com/mattachu/534fe6f7909efc83c54d995a717c3f4a) / [Raw](https://gist.githubusercontent.com/mattachu/534fe6f7909efc83c54d995a717c3f4a/raw/claude-expedition33.md) |
+| Topic                       | Overview File URL                                                                                                                                                                                             |
+|-----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Clair Obscur: Expedition 33 | [Formatted](https://github.com/mattachu/claude-expedition33/blob/main/overview/claude-expedition33.md) / [Raw](https://cdn.jsdelivr.net/gh/mattachu/claude-expedition33@main/overview/claude-expedition33.md) |
 
 -----
 
@@ -63,4 +63,4 @@ Guard against these actively throughout every session:
 
 -----
 
-*Last updated: 2025-06-12*
+*Last updated: [2025-06-12 20:09]*
