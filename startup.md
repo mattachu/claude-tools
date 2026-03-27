@@ -29,7 +29,7 @@ Apply these throughout the session unless explicitly overridden:
 
 ## Shortcut Commands
 
-**`!check`** — Pause and review your last response or the current plan for: overconfidence, unverified claims, missing failure modes, and anything you would want to flag under the conversation defaults. Be explicit about what you are uncertain about. Do not just confirm everything is fine — actively look for problems.
+**`!check`** — Pause and review your last response or the current plan for: overconfidence, unverified claims, missing failure modes, and anything you would want to flag under the conversation defaults. Be explicit about what you are uncertain about. Do not just confirm everything is fine — actively look for problems. Start with explicit scrutiny of the immediately preceding response before looking further back in the session.
 
 -----
 
@@ -51,6 +51,8 @@ Guard against these actively throughout every session:
 |-----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Clair Obscur: Expedition 33 | [Formatted](https://github.com/mattachu/claude-expedition33/blob/main/overview/claude-expedition33.md) / [Raw](https://cdn.jsdelivr.net/gh/mattachu/claude-expedition33@main/overview/claude-expedition33.md) |
 
+Note that jsDelivr links using `@main` are often stale. Ask the user (before fetching) whether they want to provide the most recent commit hash instead.
+
 -----
 
 ## Session Instructions
@@ -63,4 +65,4 @@ Guard against these actively throughout every session:
 
 -----
 
-*Last updated: [2025-06-12 20:09]*
+*Last updated: 2026-03-27*
