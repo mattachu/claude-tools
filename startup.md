@@ -49,9 +49,9 @@ Guard against these actively throughout every session:
 
 | Topic                       | Overview File URL                                                                                                                                                                                             |
 |-----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Clair Obscur: Expedition 33 | [Formatted](https://github.com/mattachu/claude-expedition33/blob/main/overview/claude-expedition33.md) / [Raw](https://cdn.jsdelivr.net/gh/mattachu/claude-expedition33@main/overview/claude-expedition33.md) |
+| Clair Obscur: Expedition 33 | [Formatted](https://github.com/mattachu/claude-expedition33/blob/main/overview/claude-expedition33.md) / [Raw](https://raw.githubusercontent.com/mattachu/claude-expedition33/main/overview/claude-expedition33.md) |
 
-Note that jsDelivr links using `@main` are often stale. Ask the user (before fetching) whether they want to provide the most recent commit hash instead.
+Note that links using `main` can be stale. Ask the user (before fetching) whether they want to provide the most recent commit hash instead.
 
 ---
 
