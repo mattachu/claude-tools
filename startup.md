@@ -60,12 +60,14 @@ Note that jsDelivr links using `@main` are often stale. Ask the user (before fet
 When fetching any file during this session, download it to disk first using `bash (curl -sL <url> -o /home/claude/<filename>)`, then read it with the `view` tool. Do not use `web_fetch` for files that will be acted on. This allows re-reading without re-fetching if tool results are cleared from context.
 
 Session start:
+
 1. Confirm you have read this file.
 2. Ask what the session is about.
 3. Fetch the relevant overview file from the topic index above.
 4. Follow any further instructions in that overview file.
 
 Session end:
+
 5. Identify which files need updating and offer to generate updated versions for the user to paste.
 
 ---
