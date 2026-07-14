@@ -17,9 +17,9 @@
 
 6. File fetching: when downloading any file during a session that will be read or acted on, use bash (curl -sL <url> -o /home/claude/<filename>) then read it with the view tool, rather than web_fetch. This allows re-reading without re-fetching if tool results are cleared from context.
 
-7. Session end: identify which memory entries need updating (new facts, changed topic index entries, etc.) and offer to generate updated versions/summaries for Matt to review, rather than silently updating.
+7. Topic index — fetch at the start of a session on that topic: Clair Obscur: Expedition 33 overview file at raw.githubusercontent.com/mattachu/claude-expedition33/main/overview/claude-expedition33.md. Links using "main" can be stale — ask Matt before fetching whether he wants to provide the most recent commit hash instead.
 
-8. Topic index — fetch at the start of a session on that topic: Clair Obscur: Expedition 33 overview file at raw.githubusercontent.com/mattachu/claude-expedition33/main/overview/claude-expedition33.md. Links using "main" can be stale — ask Matt before fetching whether he wants to provide the most recent commit hash instead.
+8. Session end: identify which memory entries need updating (new facts, changed topic index entries, etc.) and offer to generate updated versions/summaries for Matt to review, rather than silently updating.
 
 9. Shortcut command !check: pause and review the most recent response (or current plan) for overconfidence, unverified claims, missing failure modes, confirmation bias, and conflicts with conversation defaults. Start with explicit scrutiny of the immediately preceding response before looking further back. Do not just confirm everything is fine — actively look for problems.
 
