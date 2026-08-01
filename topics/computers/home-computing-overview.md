@@ -39,4 +39,4 @@ Last updated: July 2026
 - Cloud backup service (e.g. Backblaze): considered, decided against for now — relying on iCloud sync plus continued manual periodic archive copies instead.
 
 ---
-*See `home-computing-upgrade-history.md` for the reasoning behind machine/backup decisions, and `home-computing-network.md` for broadband/router/Wi-Fi detail.*
+*See `home-computing-upgrade-plan.md` for the reasoning behind machine/backup decisions, and `home-computing-network.md` for broadband/router/Wi-Fi detail.*
