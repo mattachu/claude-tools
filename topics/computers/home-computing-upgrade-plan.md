@@ -1,6 +1,6 @@
 # Household Computing — Upgrade Decisions & Reasoning
 
-Covers a single extended planning conversation, June–July 2026. Companion file: `household-computing-overview.md` for current-state summary.
+Covers a single extended planning conversation, June–July 2026. Companion file: `home-computing-overview.md` for current-state summary.
 
 ## Origin
 
@@ -51,43 +51,20 @@ Considered as Nate's birthday gift and as a potential household "hub" machine (s
 
 **Trigger**: no live backup of the ~197GB iCloud Photos library existed — only iCloud sync plus two static external-drive archives (2019, October 2025). This matters because a real corruption event already happened: pre-2019 photos were corrupted in iCloud and only recoverable via the old 2019 archive.
 
-**Time Capsule assessment**:
-- No firmware updates since 2018; genuine hardware failure risk at this age.
-- **Diagnosed a real throughput problem**: the Xbox, wired directly into the Time Capsule, measured only ~95 Mbps, versus Grandad's laptop (wired directly into the main router) getting close to full package speed. Since the Time Capsule was running in bridge mode (no routing/NAT overhead to explain a slowdown), this pointed more toward a cable or port fault than general processing slowness — never conclusively isolated with a cable-swap test before the household switched ISP/router entirely.
-- **macOS 27 will drop AFP protocol support entirely**, which Time Capsule relies on for network Time Machine backups. This only becomes an active problem once a Mac capable of running macOS 27 joins the household (i.e. after Matt's October purchase) — none of the current fleet can run it, so this was a dormant, not urgent, risk.
-- **Decision**: retire the Time Capsule from network duty. Repurpose the old Sagemcom (surplus once the new ISP router arrived) as a bridge-mode Wi-Fi access point in the same downstairs spot — a stronger radio (4×4 antennas) than the Time Capsule's, at zero cost.
+**Time Capsule assessment**: currently serves as a Time Machine target (excluding the Photos library) as well as downstairs Wi-Fi. Being retired from both roles — age, a diagnosed network throughput fault, and macOS 27 dropping the AFP protocol it depends on (see `home-computing-network.md` for the full diagnosis and the Wi-Fi replacement plan). For backup purposes specifically, its role is superseded by the planned NAS below.
 
 **NAS**: decided to go straight to a NAS rather than an interim external-drive-on-a-laptop stopgap (rejected specifically because the only always-on candidate, Nate's MacBook Air, is old and would need migrating again once Nate's Christmas PC arrives anyway). Budget options discussed: UGREEN NASync DH2300 (~£243 diskless) as the leading budget pick, versus Synology DS223j/DS224+ alternatives. Leaning toward a single 4TB NAS-rated drive rather than a RAID 1 pair — RAID judged to mainly buy convenience-of-recovery rather than being essential, given the other protections in place. **Not yet purchased; model and configuration left open.** No hard deadline (see Time Capsule/macOS 27 point above) — ideally before October, not urgent before then.
 
 **Cloud backup (Backblaze) — considered, decided against**: iCloud's existing 30-day "Recently Deleted" window already matches Backblaze's default retention tier, and the household's existing habit of periodic manual full-drive archive copies serves the same "point-in-time, long-term" purpose as Backblaze's paid Forever-retention tier, at zero ongoing cost. The genuine remaining gaps (offsite disaster protection, protection against an Apple-account-specific failure) were judged narrow enough — given the manual-archive habit continues — not to justify the ~£70/year ongoing cost.
 
-## Broadband
+## Broadband & Network
 
-Started as a simple TalkTalk Fibre 150→500 upgrade question, expanded into a full market comparison once checking the bundled router specs showed the 500 Mbps tier's TalkTalk Wi-Fi Hub 3 wasn't a meaningful upgrade (still Wi-Fi 5, no mesh — same downstairs coverage limitation as the existing Sagemcom).
-
-**Options compared** (24-month total cost, calculated in full):
-- TalkTalk Fibre 150 (new contract): £648
-- TalkTalk Fibre 500 (upgrade): £792
-- Rise Fibre, 900 Mbps symmetric: £740 — uswitch's top result, but confirmed to be a **sponsored placement**, not a genuine best-value ranking. Likely runs over the existing Openreach line (no new cable needed). Well-reviewed (Trustpilot 4.5/5), but not price-fixed — three scheduled rises over the contract.
-- Community Fibre 1 Gbps (original leaflet offer): £525
-- Community Fibre 2.5 Gbps (phone offer): £486–558, depending on price-fix status
-- Community Fibre 1 Gbps, later offer (12 months free, £23/month, confirmed fixed in writing): £276 — cheapest by a wide margin at the time
-
-**Decision**: Community Fibre — final agreed deal was **2.5 Gbps, £25/month, first 12 months free, fixed price**, requiring a new independent FTTP cable install (not reusing Openreach). Completed and working well (~1200 Mbps measured on iPhone 17 Pro).
-
-**Symmetric upload** was a deciding factor beyond price alone — directly relevant to the NAS/backup plans, Xbox Remote Play, and potential future Minecraft server hosting. This ruled out the TalkTalk options on merit as well as price, since their packages are typically asymmetric.
-
-**Declined**: Community Fibre's "Premium WiFi" mesh add-on (confirmed a paid extra, not included in the base package). Judged that the repurposed Sagemcom access point achieves a similar practical outcome for free. Also relevant: Matt had previously tested a same-SSID setup across two access points and found devices exhibit "sticky client" behaviour (won't roam to the closer access point) — so the household is sticking with its existing two-SSID approach rather than paying for proper mesh roaming.
-
-## Router: Linksys SPNM60-CF
-
-Supplied by Community Fibre — Wi-Fi 7, dual-band, part of the Velop Cognitive Mesh family (expandable with further mesh nodes if ever needed). Independent user reports flagged some real quirks: a flaky web admin interface, no companion app, and a long-standing "ghost SSID" bug reported across several Linksys mesh generations. Independent testing (Rtings) suggests no Wi-Fi 7 router currently delivers its full marketed potential — an industry-wide immaturity, not specific to this unit. Early real-world result: ~1200 Mbps measured on iPhone 17 Pro.
+Moved to its own file: see `home-computing-network.md` for the full ISP comparison, router notes, and Wi-Fi coverage / Time Capsule retirement plan. The backup-relevant parts of that (NAS as eventual Time Machine target) are covered below under Backup Strategy.
 
 ## Open Items / Not Yet Resolved
 
 - NAS model and configuration not yet purchased.
-- Time Capsule cable/port fault never conclusively isolated (moot now given the new ISP setup, but the diagnostic technique — testing a known-good device at both ends of a suspect link — is reusable if a similar issue crops up elsewhere).
-- Xbox Remote Play showing NAT type "Moderate" instead of "Open" on the new router — troubleshooting steps given (try UPnP first; then manual port forwarding with a DHCP reservation or static IP for the Xbox; check for double NAT on the ONT) but not confirmed resolved.
 - Zach's USB-to-Ethernet adapter for reducing his Minecraft/gaming lag on Wi-Fi (~£15 fix) — recommended, not confirmed purchased.
 - Church's potential switch to MacBook Neo for staff use — status unknown; would affect whether Matt needs a personal Mac at all after October.
 - Exact cable needed to drive the KTC monitor at full 1440p200Hz spec from Nate's eventual gaming PC — to be sorted once that machine exists.
+- See `home-computing-network.md` for open network/router items (Sagemcom repurposing, Xbox Remote Play NAT issue, Time Capsule's final fate).
