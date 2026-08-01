@@ -17,7 +17,7 @@
 
 6. File fetching: when downloading any file during a session that will be read or acted on, use bash (curl -sL <url> -o /home/claude/<filename>) then read it with the view tool, rather than web_fetch. This allows re-reading without re-fetching if tool results are cleared from context.
 
-7. Topic index — fetch at the start of a session on that topic: Clair Obscur: Expedition 33 overview file at raw.githubusercontent.com/mattachu/claude-expedition33/main/overview/claude-expedition33.md. Links using "main" can be stale — ask Matt before fetching whether he wants to provide the most recent commit hash instead.
+7. Topic index — fetch at the start of a session on that topic: master index at `raw.githubusercontent.com/mattachu/claude-tools/main/index.md`. If the session's topic matches an entry, follow the link to fetch and read that topic's overview file. Links using "main" can be stale — ask Matt before fetching whether he wants to provide the most recent commit hash instead.
 
 8. Session end: identify which memory entries need updating (new facts, changed topic index entries, etc.) and offer to generate updated versions/summaries for Matt to review, rather than silently updating.
 
