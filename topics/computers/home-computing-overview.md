@@ -6,8 +6,8 @@ Last updated: July 2026
 
 - **Matt** — currently MacBook Pro 13" 2019 (2×TB3 ports); not main work machine (Dell at church, possible future MacBook Neo there).
 - **Farrah** — MacBook Pro Retina 13" Late 2013 (rarely used, mostly on phone; borrows Matt's machine for occasional video calls).
-- **Zach** (15, Year 10; GCSE Music on GarageBand; likely A-Level Maths/Physics/Computer Science/Music) — currently shares MacBook Air 11" with Nate, own account on Farrah's 2013 MBP.
-- **Nate** (12, turning 13 in July) — MacBook Air 11" (primary until Christmas). New gaming PC planned for Christmas 2026, to be built together with Matt.
+- **Zach** (15, Year 11; GCSE Music on GarageBand; likely A-Level Maths/Physics/Computer Science/Music) — currently shares MacBook Air 11" with Nate, own account on Farrah's 2013 MBP.
+- **Nate** (13, Year 9) — MacBook Air 11" (primary until Christmas). New gaming PC planned for Christmas 2026, to be built together with Matt.
 - **Grandad** — Dell Inspiron 15 3525 (main machine). Lenovo IdeaPad Z580 (old, unused — not worth upgrading; recycle or hand to a boy as a no-stakes tinkering project).
 
 ## Machine Details
