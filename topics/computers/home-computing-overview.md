@@ -29,9 +29,7 @@ Last updated: July 2026
 
 - **ISP**: Community Fibre — 2.5 Gbps symmetric, £25/month (first 12 months free, fixed price for contract term). Own FTTP network (new cable installed July 2026).
 - **Router**: Linksys SPNM60-CF (Wi-Fi 7, Velop Cognitive Mesh, dual-band, mesh-expandable).
-- **Legacy hardware**:
-  - Old Sagemcom FAST 5364-3.TB (ex-TalkTalk router) — repurposed as a bridge-mode Wi-Fi access point downstairs, replacing the Time Capsule's networking role.
-  - Apple Time Capsule (5th-gen "tall" model) — being retired from network duty (age, a diagnosed throughput bottleneck, and macOS 27 dropping AFP support entirely). May continue as a supplementary Time Machine target only until fully replaced.
+- Full setup, ISP comparison reasoning, router notes, and Wi-Fi coverage plan: see `home-computing-network.md`
 
 ## Backup Status
 
@@ -41,4 +39,4 @@ Last updated: July 2026
 - Cloud backup service (e.g. Backblaze): considered, decided against for now — relying on iCloud sync plus continued manual periodic archive copies instead.
 
 ---
-*See `household-computing-upgrade-planning.md` for the reasoning behind these decisions.*
+*See `home-computing-upgrade-history.md` for the reasoning behind machine/backup decisions, and `home-computing-network.md` for broadband/router/Wi-Fi detail.*
