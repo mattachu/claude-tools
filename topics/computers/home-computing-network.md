@@ -48,8 +48,23 @@ Wi-Fi 7, dual-band, part of the Velop Cognitive Mesh family (expandable with fur
 
 **Decision**: retire the Time Capsule from network duty. Repurpose the old Sagemcom (surplus once the new Community Fibre router arrived) as a bridge-mode Wi-Fi access point in the same downstairs spot — a stronger radio (4×4 antennas) than the Time Capsule's older 3-stream 802.11ac, at zero cost. This uses the existing Ethernet run already in place to that location.
 
-## Open Items
+## Issues
 
-- **Sagemcom repurposing as downstairs access point** — planned, not yet confirmed done.
-- **Xbox Remote Play** — NAT type showing "Moderate" instead of "Open" on the new router. Troubleshooting steps given: try UPnP first; if that doesn't work, manual port forwarding with a DHCP reservation or static IP for the Xbox (ports: UDP 88, 500, 3074, 3544, 4500; TCP 53, 80, 3074); check for double NAT on the Community Fibre ONT if neither resolves it. Not yet confirmed resolved.
-- **Time Capsule** — final fate undecided (recycle vs keep as a supplementary Time Machine target for as long as it still works). See `home-computing-upgrade-plan.md` for the NAS plan that will eventually replace its backup role entirely.
+- **Sagemcom repurposing as downstairs access point/switch** — confirmed plan (see below); not yet physically completed.
+- **Xbox Remote Play** — RESOLVED. Root cause was a stuck Remote Play service on the Xbox itself, not network configuration. Fix: hard reboot of the console. NAT now reliably shows Open. Worth trying an Xbox hard reboot first if Remote Play issues recur before troubleshooting the network.
+- **Downstairs Ethernet run** — diagnosed as faulty (see below), not yet physically fixed/replaced.
+
+## Downstairs Wi-Fi Coverage & the Time Capsule
+
+**Revised decision (supersedes earlier "retire Time Capsule" plan):** the Time Capsule will continue in network duty until it dies, repositioned as a Gigabit switch in the boys' room rather than downstairs.
+
+**Diagnosed throughput problem — RESOLVED (root cause identified):** the ~95 Mbps downstairs speed was caused by a faulty downstairs Ethernet run, not the Time Capsule. Confirmed by testing the Time Capsule upstairs on a known-good cable (achieved Gigabit) versus testing directly into the TV on the downstairs run (100 Mbps). The downstairs cable is a ~20m flat Cat6 (Amazon UK B088R96D6T) — 20m is well within Gigabit spec (~100m max), so the fault is very likely a damaged pair, bad termination, or a kink/crush point, most likely where it's clipped to the wall, rather than cable length. Not yet proven; needs inspection/retest with the cable unclipped, and replacement if the loose cable still negotiates 100 Mbps. A round Cat6/Cat6a replacement (no need for Cat7/8) is preferred if a new run is needed; estimated cost ~£15–20.
+
+**Revised topology:**
+- **Boys' room**: Linksys SPNM60-CF → Time Capsule (Wi-Fi off, used purely as a Gigabit switch) → Xbox Series X + boys' MacBook Air (via Plugable UD-3900 USB-3 adapter) + Farrah's MacBook Pro (via Thunderbolt-to-Gigabit adapter). All three wired devices are 1Gbps-capped regardless of switch, so no capacity loss versus wiring directly into the CF router. Time Capsule's proximity also gives Time Machine backup a direct Ethernet path to the Macs.
+- **Downstairs**: Linksys SPNM60-CF → Sagemcom FAST 5364-3.TB (bridge mode, DHCP/routing disabled, used as AP/switch) → Xbox Series X + TV + downstairs Wi-Fi. Sagemcom's 4×4 802.11ac radio is stronger than the Time Capsule's 3-stream 802.11ac, so it's the better downstairs Wi-Fi choice regardless of the switch/AP role.
+- **Linksys SPNM60-CF** remains sole router/DHCP/NAT for the whole household. Confirmed via Linksys's own spec page: all three LAN ports are 2.5Gbps-capable (not just WAN) — relevant if any future device needs above-1Gbps wired, since neither legacy device can deliver that.
+
+**Rejected alternative — second SPNM60-CF mesh node:** considered as a way to bypass the damaged downstairs cable via wireless backhaul instead of fixing it, but rejected — a replacement cable (~£15–20) is far cheaper than another mesh node, and wired backhaul avoids wireless-backhaul capacity/consistency loss. Remains a possible future upgrade if better whole-house Wi-Fi roaming is independently wanted, separate from the cable-fault fix.
+
+**Software end-of-life (unchanged):** macOS 27 will drop AFP protocol support, which Time Capsule relies on for network Time Machine backups. Still a dormant risk — no current household Mac can run macOS 27 yet.
