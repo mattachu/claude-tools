@@ -4,4 +4,4 @@
 |-----------------------------|----------------------------------------------------------------------------------------------------------|
 | Clair Obscur: Expedition 33 | https://raw.githubusercontent.com/mattachu/claude-expedition33/main/overview/claude-expedition33.md      |
 | Home computers              | https://raw.githubusercontent.com/mattachu/claude-tools/main/topics/computers/home-computing-overview.md |
-| Cars                        | https://raw.githubusercontent.com/mattachu/claude-tools/main/topics/cars/overview.md                     |
+| Cars                        | https://raw.githubusercontent.com/mattachu/claude-tools/main/topics/cars/cars-overview.md                     |
