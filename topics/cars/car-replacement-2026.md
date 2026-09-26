@@ -1,4 +1,4 @@
-# Context: Dad's Car Replacement Decision
+# Dad's Car Replacement 2026
 
 ## Decision
 Dad has decided **against** buying out his BMW 320i lease (~£23,000) and is instead buying a **used BMW 330e (PHEV) M Sport**, bought from a private seller. Matt has been vetting listings and accompanying Dad to viewings.
@@ -6,11 +6,11 @@ Dad has decided **against** buying out his BMW 320i lease (~£23,000) and is ins
 Background on how this was reached (environmental reasoning, EV/self-charging-hybrid alternatives considered, household requirements) is in [car-replacement-2026-options.md](car-replacement-2026-options.md).
 
 ## The car being purchased
-- **2024 (24 reg) BMW 330e M Sport**, private seller, Beaconsfield — originally [listed on Autotrader](https://www.autotrader.co.uk/car-details/202609105923935)
+- **2024 (24 reg) BMW 330e M Sport**, private seller, Beaconsfield — originally listed on Autotrader
 - Registration: **VO24 XXB** · VIN: **WBA20FS0X08D82497**
 - Registered **19 March 2024**; **41,000 miles**; agreed price **£23,000**
 - 2 owners: BMW dealer (demo car), then the current seller
-- Well-specified: M Sport trim, Technology Package (Head-Up Display, Harman/Kardon sound, wireless charging), plus Comfort Pack, Sun Protection Glazing
+- Well-specified: M Sport trim, Technology Package (Head-Up Display, Harman/Kardon sound, Gesture Control, wireless charging), plus Comfort Pack, Sun Protection Glazing, Flexible Charger Mode 2, Wireless Charging Tray Plus — no Technology Plus Pack (no adaptive cruise or other Plus features found on the car)
 - Real-world EV range on test drive: **~30 miles or a bit more**
 
 ### Seller's account (checked, not yet independently verified)
@@ -38,7 +38,9 @@ The seller initially believed this is a **Generation 5 (19.5kWh)** battery with 
 - [ ] HPI check / written confirmation of no outstanding finance
 - [ ] Full service history — confirm the "Full BMW Approved Main Dealer Service History" claim
 - [ ] V5C — confirm first keeper was a dealer (demo car), and current keeper's details match the seller
-- [ ] Confirm 2 keys and both charging cables (Type 2 + 3-pin) are included
+- [ ] Confirm 2 keys are included
+- [x] Main Type 2 charging cable — confirmed present and seen in person
+- No 3-pin/"granny" cable — seller says it was never supplied by the dealer. Decided to budget for a new one rather than treat as a blocker: a generic Type 2-to-3-pin Mode 2 cable (not the BMW-branded one — forums report it as short, stiff and limited to 10A) with adjustable current (6/8/10A) and built-in Type B RCD protection, roughly £100–£200 from a reputable supplier (e.g. Screwfix, EV Cables, evchargingcablestore.com)
 - [ ] No deposit until the above is done
 
 ## Other specific cars checked and rejected
