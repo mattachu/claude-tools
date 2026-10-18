@@ -30,7 +30,7 @@ Notes on specific options:
 
 **Decision**: Community Fibre. Final agreed deal was **2.5 Gbps, £25/month, first 12 months free, fixed price** — a better tier than the cheapest quoted option, at a comparable low cost. Installed and working well (~1200 Mbps measured on iPhone 17 Pro).
 
-**Symmetric upload** was a deciding factor beyond price — relevant to NAS/cloud backup uploads, Xbox Remote Play, and potential future Minecraft server hosting (see `household-computing-upgrade-history.md` for the backup reasoning this fed into).
+**Symmetric upload** was a deciding factor beyond price — relevant to NAS/cloud backup uploads, Xbox Remote Play, and potential future Minecraft server hosting (see `home-computing-upgrade-plan.md` for the backup reasoning this fed into).
 
 **Declined**: Community Fibre's "Premium WiFi" mesh add-on (confirmed a paid extra, not included). The repurposed Sagemcom access point (see below) was judged to achieve a similar practical outcome for free. Also relevant: a same-SSID setup was tested previously across two access points and found to cause "sticky client" behaviour (devices won't roam to the closer access point) — so the household is sticking with separate SSIDs rather than paying for proper mesh roaming.
 
@@ -62,9 +62,11 @@ Wi-Fi 7, dual-band, part of the Velop Cognitive Mesh family (expandable with fur
 
 **Revised topology:**
 - **Boys' room**: Linksys SPNM60-CF → Time Capsule (Wi-Fi off, used purely as a Gigabit switch) → Xbox Series X + boys' MacBook Air (via Plugable UD-3900 USB-3 adapter) + Farrah's MacBook Pro (via Thunderbolt-to-Gigabit adapter). All three wired devices are 1Gbps-capped regardless of switch, so no capacity loss versus wiring directly into the CF router. Time Capsule's proximity also gives Time Machine backup a direct Ethernet path to the Macs.
+
+*Note (Oct 2026)*: Zach's MacBook Neo is due end of Oct 2026. It has no built-in Ethernet, so it would need its own USB-C Ethernet adapter if wired here (port choice: see `home-computing-upgrade-plan.md`). This topology will need updating once the Neo arrives and Farrah's 2013 MacBook Pro is retired.
 - **Downstairs**: Linksys SPNM60-CF → Sagemcom FAST 5364-3.TB (bridge mode, DHCP/routing disabled, used as AP/switch) → Xbox Series X + TV + downstairs Wi-Fi. Sagemcom's 4×4 802.11ac radio is stronger than the Time Capsule's 3-stream 802.11ac, so it's the better downstairs Wi-Fi choice regardless of the switch/AP role.
 - **Linksys SPNM60-CF** remains sole router/DHCP/NAT for the whole household. Confirmed via Linksys's own spec page: all three LAN ports are 2.5Gbps-capable (not just WAN) — relevant if any future device needs above-1Gbps wired, since neither legacy device can deliver that.
 
 **Rejected alternative — second SPNM60-CF mesh node:** considered as a way to bypass the damaged downstairs cable via wireless backhaul instead of fixing it, but rejected — a replacement cable (~£15–20) is far cheaper than another mesh node, and wired backhaul avoids wireless-backhaul capacity/consistency loss. Remains a possible future upgrade if better whole-house Wi-Fi roaming is independently wanted, separate from the cable-fault fix.
 
-**Software end-of-life (unchanged):** macOS 27 will drop AFP protocol support, which Time Capsule relies on for network Time Machine backups. Still a dormant risk — no current household Mac can run macOS 27 yet.
+**Software end-of-life (unchanged):** macOS 27 will drop AFP protocol support, which Time Capsule relies on for network Time Machine backups. No longer dormant as of Oct 2026: Zach's MacBook Neo (due end of Oct 2026) runs the latest macOS, and Matt's view is that a NAS is now needed for wireless Time Machine backup (see `home-computing-upgrade-plan.md`).
